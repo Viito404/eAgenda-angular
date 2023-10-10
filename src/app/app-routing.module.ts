@@ -1,7 +1,30 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [{
+  path: '',
+  redirectTo: 'dashboard',
+  pathMatch: 'full'
+},
+{
+  path: 'dashboard',
+  component: DashboardComponent,
+},
+
+{
+  path: 'contatos',
+  loadChildren: () => import('./views/contatos/contatos.module')
+  .then((m) => m.ContatosModule),
+},
+
+{
+  path: 'compromissos',
+  loadChildren: () => import('./views/compromissos/compromissos.module')
+  .then((m) => m.CompromissosModule),
+},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
