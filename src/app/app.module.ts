@@ -12,6 +12,7 @@ import { CompromissosRoutingModule } from './views/compromissos/compromissos-rou
 import { ContatosRoutingModule } from './views/contatos/contatos-routing.module';
 import { CategoriasRoutingModule } from './views/categorias/categoria-routing.module';
 import { DespesasRoutingModule } from './views/despesas/despesas-routing.module';
+import { TarefasRoutingModule } from './views/tarefas/tarefas-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DespesasRoutingModule } from './views/despesas/despesas-routing.module'
     CompromissosRoutingModule,
     ContatosRoutingModule,
     CategoriasRoutingModule,
-    DespesasRoutingModule
+    DespesasRoutingModule,
+    TarefasRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
