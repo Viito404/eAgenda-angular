@@ -2,7 +2,6 @@ import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 
-
 const routes: Routes = [{
   path: '',
   redirectTo: 'dashboard',
@@ -24,6 +23,18 @@ const routes: Routes = [{
   loadChildren: () => import('./views/compromissos/compromissos.module')
   .then((m) => m.CompromissosModule),
 },
+
+{
+  path: 'categorias',
+  loadChildren: () => import('./views/categorias/categorias.module')
+  .then((m) => m.CategoriasModule),
+},
+
+{
+  path: 'despesas',
+  loadChildren: () => import('./views/despesas/despesas.module')
+  .then((m) => m.DespesasModule),
+}
 ];
 
 @NgModule({

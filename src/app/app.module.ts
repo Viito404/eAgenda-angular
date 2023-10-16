@@ -8,10 +8,14 @@ import { ToastrModule } from 'ngx-toastr';
 import { DashboardModule } from './views/dashboard/dashboard.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CompromissosRoutingModule } from './views/compromissos/compromissos-routing.module';
+import { ContatosRoutingModule } from './views/contatos/contatos-routing.module';
+import { CategoriasRoutingModule } from './views/categorias/categoria-routing.module';
+import { DespesasRoutingModule } from './views/despesas/despesas-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     DashboardModule,
     CoreModule,
+    CompromissosRoutingModule,
+    ContatosRoutingModule,
+    CategoriasRoutingModule,
+    DespesasRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListarCompromissoViewModel } from '../models/listar-compromissos.view-model';
+import { ListarCompromissosViewModel } from '../models/listar-compromissos.view-model';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
@@ -11,7 +11,7 @@ import { map } from 'rxjs';
 })
 export class ListarCompromissosComponent implements OnInit{
 
-  compromissos: ListarCompromissoViewModel[] = [];
+  compromissos: ListarCompromissosViewModel[] = [];
 
   constructor(private toastService: ToastrService, private route: ActivatedRoute) {}
 
@@ -26,7 +26,7 @@ export class ListarCompromissosComponent implements OnInit{
     this.toastService.error(erro.message, 'Erro');
   }
 
-  processarSucesso(compromissos: ListarCompromissoViewModel[]){
+  processarSucesso(compromissos: ListarCompromissosViewModel[]){
     this.compromissos = compromissos;
   }
 }

@@ -11,7 +11,7 @@
 
         <h2 class="fs-5">
           Tem certeza que deseja excluir o compromisso
-          <span class="fw-bolder fst-italic">"Assunto" </span>?
+          <span class="fw-bolder fst-italic">{{compromissoVM.assunto}}</span>?
         </h2>
       </div>
 
@@ -19,42 +19,42 @@
         <dt class="col-md-4">
           <label class="control-label">Assunto:</label>
         </dt>
-        <dd class="col-md-8">Assunto</dd>
+        <dd class="col-md-8">{{compromissoVM.assunto}}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Tipo de Compromisso:</label>
         </dt>
-        <dd class="col-md-8">Remoto</dd>
+        <dd class="col-md-8">{{compromissoVM.tipoLocal}}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Link:</label>
         </dt>
-        <dd class="col-md-8">www.google.com</dd>
+        <dd class="col-md-8">{{compromissoVM.link}}www.google.com</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Local:</label>
         </dt>
-        <dd class="col-md-8"></dd>
+        <dd class="col-md-8">{{compromissoVM.local}}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Data:</label>
         </dt>
-        <dd class="col-md-8">Data</dd>
+        <dd class="col-md-8">{{compromissoVM.data}}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Horário de Início:</label>
         </dt>
-        <dd class="col-md-8">08:00</dd>
+        <dd class="col-md-8">{{compromissoVM.horaInicio}}:00</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Horário de Término:</label>
         </dt>
-        <dd class="col-md-8">09:00</dd>
+        <dd class="col-md-8">{{compromissoVM.horaTermino}}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Contato (opcional):</label>
         </dt>
-        <dd class="col-md-8">Nome do contato</dd>
+        <dd class="col-md-8">{{compromissoVM.contato?.nome}}</dd>
       </dl>
 
       <div class="card-footer g-grid d-flex gap-1 mt-5">

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CompromissosService } from './services/compromissos.service';
 import { ListarCompromissosComponent } from './listar-compromissos/listar-compromissos.component';

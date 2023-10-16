@@ -4,12 +4,12 @@ import { InserirCompromissoComponent } from "./inserir-compromisso/inserir-compr
 import { ListarCompromissosComponent } from "./listar-compromissos/listar-compromissos.component";
 import { EditarCompromissoComponent } from "./editar-compromisso/editar-compromisso.component";
 import { ExcluirCompromissoComponent } from "./excluir-compromisso/excluir-compromisso.component";
-import { ListarCompromissoViewModel } from "./models/listar-compromissos.view-model";
+import { ListarCompromissosViewModel } from "./models/listar-compromissos.view-model";
 import { CompromissosService } from "./services/compromissos.service";
 import { FormsCompromissoViewModel } from "./models/forms-compromisso.view-model";
 import { VisualizarCompromissoViewModel } from "./models/visualizar-compromisso.view-model";
 
-const listarCompromissosResolver: ResolveFn<ListarCompromissoViewModel[]> = 
+const listarCompromissosResolver: ResolveFn<ListarCompromissosViewModel[]> = 
 () => {
 return inject(CompromissosService).selecionarTodos();
 };

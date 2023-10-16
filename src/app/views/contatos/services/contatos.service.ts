@@ -81,7 +81,7 @@ export class ContatosService {
   }
 
   private obterHeadersAutorizacao() {
-    const token = environment.apiKey;
+    const token = environment.key;
 
     return {
       headers: new HttpHeaders({

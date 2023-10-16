@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ListarCompromissoViewModel } from '../models/listar-compromissos.view-model';
+import { ListarCompromissosViewModel } from '../models/listar-compromissos.view-model';
 
 @Component({
   selector: 'app-card-compromisso',
@@ -7,5 +7,5 @@ import { ListarCompromissoViewModel } from '../models/listar-compromissos.view-m
   styleUrls: ['./card-compromisso.component.css']
 })
 export class CardCompromissoComponent {
-  @Input({ required: true }) compromisso!: ListarCompromissoViewModel;
+  @Input({ required: true }) compromisso!: ListarCompromissosViewModel;
 }

@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, catchError, map, tap, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { FormsCompromissoViewModel } from '../models/forms-compromisso.view-model';
-import { ListarCompromissoViewModel } from '../models/listar-compromissos.view-model';
+import { ListarCompromissosViewModel } from '../models/listar-compromissos.view-model';
 import { VisualizarCompromissoViewModel } from '../models/visualizar-compromisso.view-model';
 
 
@@ -41,7 +41,7 @@ export class CompromissosService {
     );
   }
   
-  public selecionarTodos(): Observable<ListarCompromissoViewModel[]> {
+  public selecionarTodos(): Observable<ListarCompromissosViewModel[]> {
     return this.http
       .get<any>(this.endpoint, this.obterHeadersAutorizacao())
       .pipe(
@@ -72,7 +72,7 @@ export class CompromissosService {
       }
 
   private obterHeadersAutorizacao() {
-    const token = environment.apiKey;
+    const token = environment.key;
 
     return {
       headers: new HttpHeaders({

@@ -15,7 +15,7 @@ import { ListarContatoViewModel } from '../../contatos/models/listar-contatos.vi
 export class InserirCompromissoComponent implements OnInit{
   form?: FormGroup;
   compromissoVM!: FormsCompromissoViewModel;
-  contatos: ListarContatoViewModel[] =[];
+  contatos: ListarContatoViewModel[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -31,9 +31,9 @@ export class InserirCompromissoComponent implements OnInit{
       tipoLocal: new FormControl('', Validators.required),
       link: new FormControl(''),
       local: new FormControl(''),
-      data: new FormControl('09/10/2023', [Validators.required]),
-      horaInicio: new FormControl('09:30', [Validators.required]),
-      horaTermino: new FormControl('10:30', [Validators.required]),
+      data: new FormControl('09/10/2023', Validators.required),
+      horaInicio: new FormControl('09:30', Validators.required),
+      horaTermino: new FormControl('10:30', Validators.required),
       contatoId: new FormControl('')
     });
 
