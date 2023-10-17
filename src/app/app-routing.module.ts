@@ -1,17 +1,21 @@
 import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [{
   path: '',
-  redirectTo: 'dashboard',
+  redirectTo: 'login',
   pathMatch: 'full'
 },
 {
   path: 'dashboard',
   component: DashboardComponent,
 },
-
+{
+  path: 'login',
+  component: LoginComponent,
+},
 {
   path: 'contatos',
   loadChildren: () => import('./views/contatos/contatos.module')
@@ -39,7 +43,7 @@ const routes: Routes = [{
   path: 'tarefas',
   loadChildren: () => import('./views/tarefas/tarefas.module')
   .then((m) => m.TarefasModule),
-}
+},
 ];
 
 @NgModule({

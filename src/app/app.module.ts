@@ -13,6 +13,8 @@ import { ContatosRoutingModule } from './views/contatos/contatos-routing.module'
 import { CategoriasRoutingModule } from './views/categorias/categoria-routing.module';
 import { DespesasRoutingModule } from './views/despesas/despesas-routing.module';
 import { TarefasRoutingModule } from './views/tarefas/tarefas-routing.module';
+import { RegistroModule } from './views/registro/registro.module';
+import { LoginModule } from './views/login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,20 +25,18 @@ import { TarefasRoutingModule } from './views/tarefas/tarefas-routing.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    NgbDatepicker,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass:  'toast-bottom-center',
       preventDuplicates: true,
     }),
     HttpClientModule,
-    DashboardModule,
+
     CoreModule,
-    CompromissosRoutingModule,
-    ContatosRoutingModule,
-    CategoriasRoutingModule,
-    DespesasRoutingModule,
-    TarefasRoutingModule
+    RegistroModule,
+    LoginModule,
+    DashboardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

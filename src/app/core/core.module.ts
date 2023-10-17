@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule, RouterModule, NgbModule
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent, AuthModule
   ]
 })
 export class CoreModule { }

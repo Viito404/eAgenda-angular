@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DespesasRoutingModule } from './despesas-routing.module';
 import { DespesasService } from './services/despesas.service';
 import { CategoriasService } from '../categorias/services/categorias.service';
+import 'src/app/extensions/form-group.extension';
 
 @NgModule({
   declarations: [

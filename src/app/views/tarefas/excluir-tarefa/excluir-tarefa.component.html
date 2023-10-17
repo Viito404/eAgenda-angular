@@ -11,7 +11,7 @@
 
         <h2 class="fs-5">
           Tem certeza que deseja excluir a tarefa
-          <span class="fw-bolder fst-italic">"{{ tarefaVM?.titulo }}" </span>?
+          <span class="fw-bolder fst-italic">"{{ tarefaVM.titulo }}" </span>?
         </h2>
       </div>
 
@@ -20,46 +20,46 @@
           <label class="control-label">Título:</label>
         </dt>
         <dd class="col-md-8">
-          {{ tarefaVM?.titulo }}
+          {{ tarefaVM.titulo }}
         </dd>
 
         <dt class="col-md-4">
           <label class="control-label">Prioridade:</label>
         </dt>
         <dd class="col-md-8">
-          {{ tarefaVM?.prioridade }}
+          {{ tarefaVM.prioridade }}
         </dd>
 
         <dt class="col-md-4">
           <label class="control-label">Situação:</label>
         </dt>
         <dd class="col-md-8">
-          {{ tarefaVM?.situacao }}
+          {{ tarefaVM.situacao }}
         </dd>
 
         <dt class="col-md-4">
           <label class="control-label">Data de Criação:</label>
         </dt>
         <dd class="col-md-8">
-          {{ tarefaVM?.dataCriacao | date }}
+          {{ tarefaVM.dataCriacao | date }}
         </dd>
 
         <dt class="col-md-4" *ngIf="tarefaVM?.dataConclusao">
           <label class="control-label">Data de Conclusao:</label>
         </dt>
         <dd class="col-md-8" *ngIf="tarefaVM?.dataConclusao">
-          {{ tarefaVM?.dataConclusao | date }}
+          {{ tarefaVM.dataConclusao | date }}
         </dd>
 
         <dt class="col-md-4">
           <label class="control-label">Quantidade de Itens:</label>
         </dt>
-        <dd class="col-md-8">{{ tarefaVM?.quantidadeItens }}</dd>
+        <dd class="col-md-8">{{ tarefaVM.quantidadeItens }}</dd>
 
         <dt class="col-md-4">
           <label class="control-label">Percentual Concluído:</label>
         </dt>
-        <dd class="col-md-8">{{ tarefaVM?.percentualconcluido }}%</dd>
+        <dd class="col-md-8">{{ tarefaVM.percentualconcluido }}%</dd>
       </dl>
 
       <div class="card-footer g-grid d-flex gap-1 mt-5">

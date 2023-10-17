@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { FormsCompromissoViewModel } from '../models/forms-compromisso.view-model';
 import { ListarCompromissosViewModel } from '../models/listar-compromissos.view-model';
 import { VisualizarCompromissoViewModel } from '../models/visualizar-compromisso.view-model';
+import { LocalStorageService } from 'src/app/core/auth/services/local-storage.service';
 
 
 @Injectable()
@@ -12,7 +13,7 @@ export class CompromissosService {
   private endpoint: string =
     'https://e-agenda-web-api.onrender.com/api/compromissos/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private localStorageService: LocalStorageService) {}
   
   public inserir(
     compromisso: FormsCompromissoViewModel
@@ -72,7 +73,7 @@ export class CompromissosService {
       }
 
   private obterHeadersAutorizacao() {
-    const token = environment.key;
+    const token = this.localStorageService.obterDadosLocais()?.chave;
 
     return {
       headers: new HttpHeaders({

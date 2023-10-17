@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { FormsCategoriaViewModel } from '../models/forms-categoria.view-model';
 import { ListarCategoriasViewModel } from '../models/listar-categorias.view-model';
 import { VisualizarCategoriaViewModel } from '../models/visualizar-categoria.view-model';
+import { LocalStorageService } from 'src/app/core/auth/services/local-storage.service';
 
 
 @Injectable()
@@ -12,7 +13,7 @@ export class CategoriasService {
   private endpoint: string =
     'https://e-agenda-web-api.onrender.com/api/Categorias/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private localStorageService: LocalStorageService) {}
   
   public inserir(
     categoria: FormsCategoriaViewModel
@@ -72,7 +73,7 @@ export class CategoriasService {
       }
 
   private obterHeadersAutorizacao() {
-    const token = environment.key;
+    const token = this.localStorageService.obterDadosLocais()?.chave;
 
     return {
       headers: new HttpHeaders({
