@@ -9,14 +9,6 @@
   </div>
 
   <div class="d-flex gap-1 justify-content-end card-footer bg-transparent">
-
-    <button class="btn btn-outline-dark rounded-5 py-2" 
-    [ngbTooltip]="contato.favorito ? 'Desfavoritar' : 'Favoritar'"
-    placement="bottom"
-    (click)="favoritarContato(contato)">
-      <i class="bi" [ngClass]="contato.favorito ? 'bi-star-fill' : 'bi-star'"></i>
-    </button>
-
     <button
       class="btn btn-outline-dark rounded-5 py-2"
       routerLink="/contatos/editar/{{ contato.id }}"

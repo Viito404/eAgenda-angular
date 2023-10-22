@@ -20,4 +20,7 @@ public obterDadosLocais(): TokenViewModel | undefined{
 
   return JSON.parse(jsonString) as TokenViewModel;
 }
+public limparDadosLocais(): void{
+  localStorage.setItem(this.chaveLocalStorage, '');
+}
 } 

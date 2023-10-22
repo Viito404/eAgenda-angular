@@ -5,6 +5,7 @@ export class VisualizarContatoViewModel {
   telefone: string;
   cargo: string;
   empresa: string;
+  favorito: boolean;
 
   constructor(
     id: string,
@@ -12,7 +13,8 @@ export class VisualizarContatoViewModel {
     email: string,
     telefone: string,
     cargo: string,
-    empresa: string
+    empresa: string,
+    favorito: boolean
   ) {
     this.id = id;
     this.nome = nome;
@@ -20,5 +22,6 @@ export class VisualizarContatoViewModel {
     this.telefone = telefone;
     this.cargo = cargo;
     this.empresa = empresa;
+    this.favorito = favorito;
   }
 }

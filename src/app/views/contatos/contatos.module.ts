@@ -12,8 +12,6 @@ import 'src/app/extensions/form-group.extension';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContatosRoutingModule } from './contatos-routing.module';
 
-
-
 @NgModule({
   declarations: [InserirContatoComponent, ListarContatosComponent, EditarContatoComponent, ExcluirContatoComponent, CardContatoComponent],
   imports: [CommonModule, ReactiveFormsModule, ContatosRoutingModule, NgbModule],

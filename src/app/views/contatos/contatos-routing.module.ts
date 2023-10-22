@@ -14,7 +14,6 @@ const listarContatosResolver: ResolveFn<ListarContatoViewModel[]> =
 return inject(ContatosService).selecionarTodos();
 };
 
-
 const formsContatoResolver: ResolveFn<FormsContatoViewModel> = 
 (route: ActivatedRouteSnapshot) => {
 return inject(ContatosService).selecionarPorId(route.paramMap.get('id')!);
